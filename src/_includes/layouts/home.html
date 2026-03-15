@@ -1,0 +1,13 @@
+{% extends "layouts/base.html" %}
+
+{% block content %}
+<article>
+	{% if not hideTitle %}
+		<h2>{{ title }}</h2>
+	{% endif %}
+	{{ content | safe }}
+	{% if not hideFooter %}
+		{% include "partials/page-footer.html" %}
+	{% endif %}
+</article>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% set imageItems = imageItems or gallery %}
+{% set imageLimit = imageLimit or 4 %}
+{% set imageHeading = imageHeading or "RECENT IMAGES" %}
+{% set imageGalleryUrl = imageGalleryUrl or "/gallery/" %}
+{% set imageLinkText = imageLinkText or "View full gallery" %}
+
+<h2>{{ imageHeading }}</h2>
+
+<div class="home-gallery">
+  {% for item in imageItems.slice(0, imageLimit) %}
+    <a
+      href="{{ imageGalleryUrl }}"
+      class="home-gallery__item"
+      aria-label="View gallery image: {{ item.alt }}"
+    >
+      <img
+        src="{{ item.thumb }}"
+        alt="{{ item.alt }}"
+        loading="lazy"
+        decoding="async"
+        {% if item.width %}width="{{ item.width }}"{% endif %}
+        {% if item.height %}height="{{ item.height }}"{% endif %}
+      >
+    </a>
+  {% endfor %}
+</div>

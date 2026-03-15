@@ -1,0 +1,24 @@
+<footer class="entry-footer">
+  <div class="entry-footer__byline">
+    {% if date_updated %}
+    <span style="color: var(--muted)">Last updated: </span><a href="{{ date_updated | wikiDateFilter }}" target="_blank" rel="noopener noreferrer" class="post-date-link">
+      <time class="footer-time" datetime="{{ date | w3DateFilter }}"><em>{{ date_updated | dateFilter }}</em></time>
+    </a>
+    {% elif date %}
+    <span style="color: var(--muted)">Posted: </span><a href="{{ date | wikiDateFilter }}" target="_blank" rel="noopener noreferrer" class="post-date-link">
+      <time class="footer-time" datetime="{{ date | w3DateFilter }}"><em>{{ date | dateFilter }}</em></time>
+    </a>
+    {% elif birthday %}
+    <span style="color: var(--muted)">Day of birth: </span><a href="{{ birthday | wikiDateFilter }}" target="_blank" rel="noopener noreferrer" class="post-date-link">
+      <time class="footer-time" datetime="{{ birthday | w3DateFilter }}"><em>{{ birthday | dateFilter }}</em></time>
+    </a>
+    {% endif %}
+  </div>
+  <div class="entry-footer__social">
+    <a href="/about/">Phil Nguyen</a>
+    <span style="font-size: 0.8rem" aria-hidden="true">~</span>
+    <a href="https://bsky.app/profile/philnguyen.bsky.social" rel="me">Bluesky</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://substack.com/@philintheblank">Substack</a>
+  </div>
+</footer>

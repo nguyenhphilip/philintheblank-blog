@@ -1,0 +1,16 @@
+<div class="page-header [ bg-light-glare ]">
+	<div class="[ wrapper ] [ flow ]">
+		{% if not hideTitle %}
+		
+		<h2 class="page-header [ headline ]" data-highlight="primary">
+			{{ pageHeaderTitle | upper }}
+		</h2>
+		{% endif %}
+		{% if pageHeaderSummary %}
+		<div class="[ page-header__summary ] [ measure-long ]">
+			{{ pageHeaderSummary | safe }}
+		</div>
+		{% endif %}
+	</div>
+</div>
+

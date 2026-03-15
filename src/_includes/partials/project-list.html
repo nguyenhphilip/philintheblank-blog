@@ -1,0 +1,32 @@
+<div class="project-list">
+  {% for item in projectListItems %}
+    <article class="project-entry">
+      {% if item.data.preview_image %}
+        <a href="{{ item.url }}" class="project-entry__image-link">
+          <img
+            src="{{ item.data.preview_image }}"
+            alt="{{ item.data.title }}"
+            class="project-entry__image"
+          >
+        </a>
+      {% endif %}
+
+      <div class="post-item">
+        <div class="post-title-wrap">
+          <a href="{{ item.url }}" class="post-title post-list__link">
+            {{ item.data.title }}
+          </a>
+        </div>
+        <span class="post-date">
+          {{ item.date | dateFilter }}
+        </span>
+      </div>
+
+      {% if item.data.description %}
+        <p class="post-description project-entry__description">
+          {{ item.data.description }}
+        </p>
+      {% endif %}
+    </article>
+  {% endfor %}
+</div>

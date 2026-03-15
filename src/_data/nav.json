@@ -1,0 +1,24 @@
+{
+	"items": [
+		{
+			"text": "Writing",
+			"url": "/blog/"
+		},
+		{
+			"text": "Poems",
+			"url": "/poems/"	
+		},
+		{
+			"text": "Projects",
+			"url": "/projects/"
+		},
+		{
+			"text": "Gallery",
+			"url": "/gallery/"
+		},
+		{
+			"text": "About",
+			"url": "/about/"
+		}
+	]
+}

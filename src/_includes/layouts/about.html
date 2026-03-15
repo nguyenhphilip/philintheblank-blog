@@ -1,0 +1,11 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+
+{% block content %}
+    {% include "partials/page-header.html" %}
+    <article>
+        <div class="[ page-content ] [ flow wrapper ] [ flow-space-700 gap-top-700 ]">{{ content | safe }}</div>
+    </article>
+
+{% endblock %}

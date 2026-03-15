@@ -1,0 +1,36 @@
+<div class="post-list">
+  {% for item in postListItems %}
+    {% if not maxItems or loop.index <= maxItems %}
+      <article class="post-card{% if item.data.preview_image and not compactList %} post-card--with-image{% endif %}">
+        {% if item.data.preview_image and not compactList %}
+          <a href="{{ item.url }}" class="post-card__image-link">
+            <img
+              src="{{ item.data.preview_image }}"
+              alt="{{ item.data.title }}"
+              class="post-card__image"
+            >
+          </a>
+        {% endif %}
+
+        <div class="post-card__content">
+          <div class="post-item">
+            <div class="post-title-wrap">
+              <a href="{{ item.url }}" class="post-title post-list__link">
+                {{ item.data.title | title }}
+              </a>
+            </div>
+            <span class="post-date">
+              {{ item.date | dateFilter }}
+            </span>
+          </div>
+
+          {% if item.data.description and not compactList %}
+            <p class="post-description">
+              {{ item.data.description }}
+            </p>
+          {% endif %}
+        </div>
+      </article>
+    {% endif %}
+  {% endfor %}
+</div>

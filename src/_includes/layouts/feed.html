@@ -1,0 +1,28 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = content %}
+
+{% set postListItems = [] %}
+{% set compactList = true %}
+
+{% if tag %}
+	{% set postListItems = collections[tag] %}
+	{% set pageHeaderTitle = 'Blog posts filed under “' + tag + '”' %}
+{% elseif collectionKey %}
+	{% set postListItems = collections[collectionKey] %}
+{% elseif pagination %}
+	{% set postListItems = pagination.items %}
+{% endif %}
+
+{% block content %}
+
+	<article>
+		{% include "partials/page-header.html" %}
+		{% include "partials/post-list.html" %}
+		{% if pagination %}
+			{% include "partials/pagination.html" %}
+		{% endif %}
+	</article>
+	
+{% endblock %}

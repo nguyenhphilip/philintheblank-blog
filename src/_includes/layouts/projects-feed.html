@@ -1,0 +1,24 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+{% set postListItems = [] %}
+
+{% if collectionKey %}
+  {% set postListItems = collections[collectionKey] %}
+{% elseif pagination %}
+  {% set postListItems = pagination.items %}
+{% endif %}
+
+{% block content %}
+
+  <article>
+
+    {% include "partials/page-header.html" %}
+    {% include "partials/post-list.html" %}
+
+    {% if pagination %}
+      {% include "partials/pagination.html" %}
+    {% endif %}
+  </article>
+
+{% endblock %}

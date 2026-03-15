@@ -1,0 +1,4 @@
+{
+	"layout": "layouts/poem.html",
+	"permalink": "/poems/{{ title | slugify }}/index.html"
+}

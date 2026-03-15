@@ -1,0 +1,27 @@
+{% if pagination.href.next or pagination.href.previous %}
+	<footer class="[ pagination ] [ dot-shadow panel ] [ bg-light-glare font-sans weight-bold ]">
+		<div class="pagination-wrapper">
+			<nav class="pagination__inner" aria-label="Pagination links">
+
+				{% if pagination.href.next %}
+					<a href="{{ pagination.href.next }}{{ paginationAnchor }}" class="pagination__older">
+						<span>{{ paginationNextText if paginationNextText else 'Next' }}</span>
+					</a>
+				{% else %}
+					<span class="pagination__placeholder" aria-hidden="true"></span>
+				{% endif %}
+
+				<p class="gallery-page-count">{{ pagination.pageNumber + 1 }} / {{ pagination.pages | length }}</p>
+
+				{% if pagination.href.previous %}
+					<a href="{{ pagination.href.previous }}{{ paginationAnchor }}" class="pagination__newer">
+						<span>{{ paginationPrevText if paginationPrevText else 'Previous' }}</span>
+					</a>
+				{% else %}
+					<span class="pagination__placeholder" aria-hidden="true"></span>
+				{% endif %}
+
+			</nav>
+		</div>
+	</footer>
+{% endif %}

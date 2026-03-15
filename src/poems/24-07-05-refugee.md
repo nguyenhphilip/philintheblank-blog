@@ -1,0 +1,25 @@
+---
+title: "Refugee"
+date: 2024-07-05
+tags:
+  - "poetry"
+title-block-banner: false
+---
+
+Like a berry hanging from a vine
+that’s the first sign, according to
+the experts. But you didn’t know it
+then: back in Vietnam fruit grew 
+on trees and bushes. It didn’t hide
+and rupture like cherries too ripe
+inside your wife’s head. 
+
+Even war has its starts, its survivors.
+All you got was a thud and a body
+choking on itself. That was when
+we became refugees too.
+
+One day we told you we saw her,
+going elsewhere. When you
+finally looked, you found her picking
+fruit in familiar fields.

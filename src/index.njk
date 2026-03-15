@@ -1,0 +1,31 @@
+---
+title: "Home"
+layout: "layouts/home.html"
+hideTitle: true
+hideFooter: false
+date_updated: "2026-03-14"
+---
+
+<h2>RECENT POSTS</h2>
+{% set compactList = false %}
+{% set maxItems = 2 %}
+{% set postListItems = collections.blog %}
+{% include "partials/post-list.html" %}
+
+<h2>RECENT POEMS</h2>
+{% set compactList = true %}
+{% set maxItems = 2 %}
+{% set postListItems = collections.poems %}
+{% include "partials/post-list.html" %}
+
+<h2>RECENT PROJECTS</h2>
+{% set compactList = false %}
+{% set maxItems = 1 %}
+{% set postListItems = [collections.projects[0]] %}
+{% include "partials/post-list.html" %}
+
+{% set imageItems = gallery %}
+{% set imageLimit = 4 %}
+{% set imageHeading = "RECENT IMAGES" %}
+{% set imageGalleryUrl = "/gallery/" %}
+{% include "partials/recent-images.html" %}
