@@ -45,7 +45,7 @@ async function generateImageVariants(srcPath) {
     filenameFormat: function (id, src, width, format) {
       const basename = path.basename(src, path.extname(src));
       const ext = path.extname(src).replace(".", "").toLowerCase();
-      return `${basename}-${ext}-${width}w.${format}`;
+      return `${basename}-${ext}-${id}-${width}w.${format}`;
     }
   });
 
