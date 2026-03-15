@@ -2,7 +2,8 @@
     "scripts": {
         "start": "eleventy --serve",
         "build": "eleventy",
-        "gallery:meta": "node scripts/generate-gallery-meta.mjs"
+        "gallery:meta": "node scripts/generate-gallery-meta.mjs",
+        "check-images": "git ls-files | grep -E '\\.(JPG|JPEG|PNG|WEBP)$' && echo 'Fix uppercase image extensions' && exit 1 || exit 0"
     },
     "type": "module",
     "dependencies": {

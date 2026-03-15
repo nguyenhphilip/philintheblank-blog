@@ -22,14 +22,12 @@ date_updated: "2026-03-14"
             class="gallery-card"
             type="button"
             aria-label="Open image: {{ item.alt }}"
-            data-filename="{{ item.filename }}"
             data-full="{{ item.src }}"
             data-alt="{{ item.alt }}"
             data-caption="{{ item.caption | escape }}"
             data-date="{{ item.dateDisplay | escape }}"
             data-location="{{ item.location | escape }}"
           >
-          <small>{{ item.filename }}</small>
             <img
               src="{{ item.thumb }}"
               alt="{{ item.alt }}"
