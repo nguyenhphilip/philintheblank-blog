@@ -9,7 +9,7 @@
       <time class="footer-time" datetime="{{ date | w3DateFilter }}"><em>{{ date | dateFilter }}</em></time>
     </a>
     {% elif birthday %}
-    <span style="color: var(--muted)">Day of birth: </span><a href="{{ birthday | wikiDateFilter }}" target="_blank" rel="noopener noreferrer" class="post-date-link">
+    <span style="color: var(--muted)">Date of birth: </span><a href="{{ birthday | wikiDateFilter }}" target="_blank" rel="noopener noreferrer" class="post-date-link">
       <time class="footer-time" datetime="{{ birthday | w3DateFilter }}"><em>{{ birthday | dateFilter }}</em></time>
     </a>
     {% endif %}
