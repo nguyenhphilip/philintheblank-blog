@@ -44,7 +44,8 @@ async function generateImageVariants(srcPath) {
     urlPath: "/images/generated/gallery/",
     filenameFormat: function (id, src, width, format) {
       const basename = path.basename(src, path.extname(src));
-      return `${basename}-${width}w.${format}`;
+      const ext = path.extname(src).replace(".", "").toLowerCase();
+      return `${basename}-${ext}-${width}w.${format}`;
     }
   });
 
@@ -90,6 +91,15 @@ export default async function () {
 
       const generated = await generateImageVariants(fullPath);
 
+      if (meta.date) {
+        const parsed = new Date(meta.date).getTime();
+        if (Number.isNaN(parsed)) {
+          console.log(`Invalid date for ${file}: ${meta.date}`);
+        }
+      } else {
+        console.log(`Missing date for ${file}`);
+      }
+
       return {
         filename: file,
         src: generated.full,
@@ -108,8 +118,12 @@ export default async function () {
   );
 
   images.sort((a, b) => {
-    const aTime = a.date ? new Date(a.date).getTime() : 0;
-    const bTime = b.date ? new Date(b.date).getTime() : 0;
+    const aParsed = a.date ? new Date(a.date).getTime() : NaN;
+    const bParsed = b.date ? new Date(b.date).getTime() : NaN;
+
+    const aTime = Number.isNaN(aParsed) ? 0 : aParsed;
+    const bTime = Number.isNaN(bParsed) ? 0 : bParsed;
+
     return bTime - aTime;
   });
 
