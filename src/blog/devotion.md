@@ -25,4 +25,4 @@ Downtown the coffee shop I used to frequent is gone. I walk around aimlessly pas
 
 I make a final stop at the coast and stare out at the vast Pacific. Roses and rose petals litter the sand. It occurs to me that I have been chasing a trail left by my past selves, searching for a sense of unity and home. I pause and ponder the distance between who I was then, and who I am now. The waves continue crashing, and I imagine myself riding them, surfing the familiar edges with a little more grace, a little more humility, a little more peace of mind. Thoughts of the future silently slip away as I ease into the moment, as the moment seizes me. A ghost is whispering, telling me everything you need is here.
 
-{% image "/images/gallery/devotion.JPG", "Devotion", "(min-width: 900px) 760px, 100vw", [500, 760, 1200] %}
+{% image "/images/gallery/devotion.jpg", "Devotion", "(min-width: 900px) 760px, 100vw", [500, 760, 1200] %}

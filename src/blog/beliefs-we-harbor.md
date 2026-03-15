@@ -39,4 +39,4 @@ It was hard, initially, to just be 'me' with him. It felt icky to shake his hand
 
 I think the cure to our unconscious, biased generalizations and categorization of people who are perceived as different from us is to constantly expose ourselves to and interact with a variety of people. We may realize in these moments that they are just like you and me.
 
-{% image "/images/gallery/bookspine.JPG", "Bookspine", "(min-width: 900px) 760px, 100vw", [500, 760, 1200] %}
+{% image "/images/gallery/bookspine.jpg", "Bookspine", "(min-width: 900px) 760px, 100vw", [500, 760, 1200] %}

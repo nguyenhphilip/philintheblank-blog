@@ -21,4 +21,4 @@ The alternative is to live a divided life, at best. If it feels that way, commit
 
 Some days I miss it, the familiar yearnings for elsewheres and foreign roads. They are still there if I dig deep enough, though in a different, more mature form. Rather than lead me to new vistas, they've begun to guide me toward richer experiences in what has become the daily. Whether it is with old friends and existing but fertile relationships, partially learned songs and shelved books collecting dust, pursuits that would have previously been uncommitted from when they inevitably grew difficult to chase, the roots I've developed are being embodied. Where they branch off to isn't as important now as is embracing the seasonality of the currents, wherever they may lead me.
 
-{% image "/images/gallery/sunrise.JPG", "Sunrise", "(min-width: 900px) 760px, 100vw", [500, 760, 1200] %}
+{% image "/images/gallery/sunrise.jpg", "Sunrise", "(min-width: 900px) 760px, 100vw", [500, 760, 1200] %}
