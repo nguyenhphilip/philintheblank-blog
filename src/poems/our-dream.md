@@ -12,4 +12,4 @@ constellations, a place
 open to all if you're not
 afraid of heights, a home
 for two who carve dreams
-by wild candlelight.
+into the night.

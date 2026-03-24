@@ -10,10 +10,12 @@ haven't you had enough?
 Just grant me this once
 a wish from above.
 I'm asking for reassurance
-perhaps, and maybe possibility
-too. Certainly
-certainties will do–
+perhaps, and maybe
+possibility too. Certainly
+certainties would do–
 but if that's too much to ask for
 just leave me flowers at my door
 so I may enumerate my blessings
-on petals once more.
+on petals once more,
+Spring's guarentee in the dark
+of my misery.

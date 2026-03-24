@@ -18,4 +18,5 @@ They say we need something different.
 But still we can see
 we have all that we need, everything
 we can dream we do and more
-behind the inner door.
+behind the inner door
+they cannot find.

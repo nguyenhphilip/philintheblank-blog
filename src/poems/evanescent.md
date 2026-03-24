@@ -15,7 +15,7 @@ they only see the distance
 between who we were
 
 and who we are now.
-I can’t tell
+i can’t tell
 
 if you’re smiling
 or if that’s the wrinkle

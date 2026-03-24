@@ -33,8 +33,8 @@ a roof, memories
 forever frozen
 in place. You’ll know
 
-he’s gone when
-the silence
+he’s gone
+when the silence
 
-settles
-like dust.
+fails
+to settle.
