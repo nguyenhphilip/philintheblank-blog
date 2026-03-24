@@ -7,10 +7,10 @@ draft: false
 
 Here are seventeen random lines from different poems I've written. The exercise is to use them to create a new poem, given certain parameters.
 
-- You can arrange them in any order
-- You can change the tense of verbs
-- You can change pronouns (he to she, she to it, etc)
-- You cannot insert lines between lines, but you can break a single line up across multiple line breaks
+.You can arrange them in any order
+.You can change the tense of verbs
+.You can change pronouns (he to she, she to it, etc)
+.You cannot insert lines between lines, but you can break a single line up across multiple line breaks
 
 _Original lines:_
 
