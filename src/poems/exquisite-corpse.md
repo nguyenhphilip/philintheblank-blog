@@ -53,7 +53,8 @@ snapping
 
 shut your spirit. Nobody’s
 here again, that shadow.
-You walk on eight, 
+You walk on eight, You still
 
-failing to remember
-You who were yours.
+wearing that scrappy mustache,
+failing to remember You
+who were yours.
