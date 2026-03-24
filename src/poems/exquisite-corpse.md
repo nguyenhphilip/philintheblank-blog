@@ -35,31 +35,25 @@ never felt so good
 
 EXQUISITELY CORPSING A SELF
 
-
 You lived in the back of your throat.
 A wasp had been inside it, what prevents
 You. How hungry You were
-
 
 to feel how happy never felt: so good
 unlike arranging and combining
 in new configurations. The hour 
 
-
 claimed it was summer,
 something more poetic like
 the skin, the sigh sagging
-
 
 from your mouth,
 the key, the moon
 snapping
 
-
 shut your spirit. Nobody’s
 here again, that shadow.
 You walk on eight, 
-
 
 failing to remember
 You who were yours.
