@@ -12,10 +12,33 @@ function escapeHtml(str = "") {
         .replace(/'/g, "&#39;");
 }
 
+function ymdDateFilter(value) {
+    if (!value) return "";
+
+    if (typeof value === "string") {
+        const m = value.match(/^(\d{4})-(\d{2})-(\d{2})/);
+        if (m) {
+            return `${m[1]}-${m[2]}-${m[3]}`;
+        }
+    }
+
+    const d = new Date(value);
+    if (Number.isNaN(d.getTime())) {
+        return "";
+    }
+
+    const year = d.getUTCFullYear();
+    const month = String(d.getUTCMonth() + 1).padStart(2, "0");
+    const day = String(d.getUTCDate()).padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+}
+
 export default function (eleventyConfig) {
     eleventyConfig.addFilter('dateFilter', dateFilter);
     eleventyConfig.addFilter('w3DateFilter', w3DateFilter);
     eleventyConfig.addFilter('wikiDateFilter', wikiDateFilter);
+    eleventyConfig.addFilter('ymdDateFilter', ymdDateFilter);
 
     eleventyConfig.addFilter("truncate", (value, length = 140) => {
         if (!value) return "";

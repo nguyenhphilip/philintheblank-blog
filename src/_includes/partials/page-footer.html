@@ -1,19 +1,49 @@
 <footer class="entry-footer">
   <div class="entry-footer__byline">
     {% if date_updated %}
-    <span style="color: var(--muted)">Last updated: </span><a href="{{ date_updated | wikiDateFilter }}" target="_blank" rel="noopener noreferrer" class="post-date-link">
-      <time class="footer-time" datetime="{{ date | w3DateFilter }}"><em>{{ date_updated | dateFilter }}</em></time>
-    </a>
+      {% set footerDate = date_updated %}
+      {% set footerLabel = "Last updated:" %}
+      {% set usePoemadayLink = true %}
     {% elif date %}
-    <span style="color: var(--muted)">Posted: </span><a href="{{ date | wikiDateFilter }}" target="_blank" rel="noopener noreferrer" class="post-date-link">
-      <time class="footer-time" datetime="{{ date | w3DateFilter }}"><em>{{ date | dateFilter }}</em></time>
-    </a>
+      {% set footerDate = date %}
+      {% set footerLabel = "Posted:" %}
+      {% set usePoemadayLink = true %}
     {% elif birthday %}
-    <span style="color: var(--muted)">Date of birth: </span><a href="{{ birthday | wikiDateFilter }}" target="_blank" rel="noopener noreferrer" class="post-date-link">
-      <time class="footer-time" datetime="{{ birthday | w3DateFilter }}"><em>{{ birthday | dateFilter }}</em></time>
-    </a>
+      {% set footerDate = birthday %}
+      {% set footerLabel = "Date of birth:" %}
+      {% set usePoemadayLink = false %}
+    {% endif %}
+
+    {% if footerDate %}
+      {% set footerLookupDate = footerDate | w3DateFilter %}
+      {% set poemEntry = poemaday and poemaday[footerLookupDate] %}
+
+      <span style="color: var(--muted)">{{ footerLabel }} </span>
+
+      {% if usePoemadayLink and poemEntry %}
+        <a
+          href="{{ poemEntry.url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="post-date-link"
+          title="{{ poemEntry.title }} by {{ poemEntry.author }}"
+          aria-label="Poem-a-Day for {{ footerDate | dateFilter }}: {{ poemEntry.title }} by {{ poemEntry.author }}"
+        >
+          <time class="footer-time" datetime="{{ footerLookupDate }}"><em>{{ footerDate | dateFilter }}</em></time>
+        </a>
+      {% else %}
+        <a
+          href="{{ footerDate | wikiDateFilter }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="post-date-link"
+        >
+          <time class="footer-time" datetime="{{ footerLookupDate }}"><em>{{ footerDate | dateFilter }}</em></time>
+        </a>
+      {% endif %}
     {% endif %}
   </div>
+
   <div class="entry-footer__social">
     <a href="/about/">Phil Nguyen</a>
     <span style="font-size: 0.8rem" aria-hidden="true">~</span>

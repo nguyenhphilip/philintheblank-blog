@@ -1,14 +1,18 @@
 {
     "scripts": {
+        "fetch:poemaday": "node scripts/fetch-poemaday.mjs",
+        "fetch:poemaday:refresh": "node scripts/fetch-poemaday.mjs --refresh",
+        "build": "npm run fetch:poemaday && eleventy",
         "start": "eleventy --serve",
-        "build": "eleventy",
         "gallery:meta": "node scripts/generate-gallery-meta.mjs",
         "check-images": "git ls-files | grep -E '\\.(JPG|JPEG|PNG|WEBP)$' && echo 'Fix uppercase image extensions' && exit 1 || exit 0"
+        
     },
     "type": "module",
     "dependencies": {
         "@11ty/eleventy": "^3.1.2",
         "@11ty/eleventy-img": "^6.0.4",
+        "cheerio": "^1.2.0",
         "exifr": "^7.1.3",
         "luxon": "^3.7.2"
     }
